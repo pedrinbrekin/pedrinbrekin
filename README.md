@@ -18,7 +18,6 @@
 › Graduando em Sistemas de Informação — Faculdade São Luís de Jaboticabal
 › Analista de Sistemas & Desenvolvedor na Fácil Informática
 › Migração de sistemas legados: Delphi XE10 → .NET 10 + cloud deploy
-› ~600 clientes ativos na plataforma que desenvolvo e mantenho
 › Self-taught. Movido por problema real, não por tutorial.
 ```
 
@@ -61,16 +60,7 @@
 
 ---
 
-## ☽ `$ wakatime --week`
 
-<div align="center">
-
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
-</div>
-
----
 
 ## ☽ `$ projects --featured`
 
@@ -81,13 +71,13 @@
 │  tags: [Docker] [Firebird] [.NET 10] [offline-first]        │
 └─────────────────────────────────────────────────────────────┘
 
-┌─ ⬡ SistemaSH ─────────────────────────────────────────────┐
+┌─ ⬡ SistemaS2H ─────────────────────────────────────────────┐
 │  Sistema de gestão completo                                 │
 │  WPF (C#) + backend robusto PostgreSQL                      │
 │  tags: [C#] [WPF] [PostgreSQL]                              │
 └─────────────────────────────────────────────────────────────┘
 
-┌─ ⬡ Automação Fiscal ───────────────────────────────────────┐
+┌─ ⬡ Automação de Instalação de Sistema Fiscal ──────────────-┐
 │  Scripts Pascal (Inno Setup) para deploy e update           │
 │  automático de módulos fiscais — NF-e, NFC-e, SAT, CT-e     │
 │  tags: [Pascal] [Inno Setup] [NF-e] [fiscal]                │
@@ -95,7 +85,7 @@
 
 ┌─ ⬡ Infraestrutura RustDesk ────────────────────────────────┐
 │  Servidor self-hosted de suporte remoto em VPS              │
-│  Otimização P2P via Headscale/Tailscale — ~300 dispositivos │
+│  Otimização P2P via Headscale/Tailscale                     │
 │  tags: [RustDesk] [VPS] [Docker] [Tailscale]                │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -116,12 +106,12 @@
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/EMAIL-C084FC?style=for-the-badge&logo=gmail&logoColor=0a0a0f)](mailto:SEU_EMAIL_AQUI)
+[![Email](https://img.shields.io/badge/EMAIL-C084FC?style=for-the-badge&logo=gmail&logoColor=0a0a0f)](mailto:pedrin14brekin@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-7C3AED?style=for-the-badge&logo=linkedin&logoColor=white)](SEU_LINKEDIN_AQUI)
 
 <br/>
 
-`░░ PEDRO HENRIQUE BREKE ░░ MONTE ALTO, SP ░░ 2025 ░░`
+`░░ PEDRO HENRIQUE BREKE ░░ MONTE ALTO, SP ░░ 2026 ░░`
 
 </div>
 
