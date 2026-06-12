@@ -225,6 +225,7 @@ ring_offset   = round(251.3 * (1 - min(1.0, cur / best if best else 0)), 1)
 lines_changed = 0
 views         = 0
 pending       = []
+my_lines      = {}   # linhas que EU alterei por repo (peso de contribuicao)
 print(f"Analisando {len(repos)} repos (linhas + views)...")
 
 for r in repos:
@@ -236,7 +237,9 @@ for r in repos:
         for c in stats:
             if (c.get("author") or {}).get("login","").lower() == USERNAME.lower():
                 for w in c.get("weeks", []):
-                    lines_changed += w.get("a",0) + w.get("d",0)
+                    mine = w.get("a",0) + w.get("d",0)
+                    lines_changed += mine
+                    my_lines[nr] = my_lines.get(nr, 0) + mine
     traffic, code = rest(f"/repos/{nr}/traffic/views")
     if code == 200 and traffic:
         views += traffic.get("count", 0)
@@ -250,21 +253,31 @@ if pending:
             for c in stats:
                 if (c.get("author") or {}).get("login","").lower() == USERNAME.lower():
                     for w in c.get("weeks", []):
-                        lines_changed += w.get("a",0) + w.get("d",0)
+                        mine = w.get("a",0) + w.get("d",0)
+                        lines_changed += mine
+                        my_lines[nr] = my_lines.get(nr, 0) + mine
 
 # 5. Linguagens agregadas
+# Pondera cada repo pela MINHA contribuicao (linhas que eu alterei).
+# Dentro de cada repo, a linguagem entra pela sua fracao de bytes.
+# Resultado: as linguagens onde eu mais escrevi codigo aparecem em
+# primeiro plano, em vez do volume de codigo legado que eu nao escrevi.
+# Fallback: se a API de stats nao retornou nada, cada repo vale 1.
+use_contrib = any(v > 0 for v in my_lines.values())
+
 langs = {}
 for r in repos:
     edges = r["languages"]["edges"]
     repo_total = sum(e["size"] for e in edges) or 1
+    contributed = my_lines.get(r["nameWithOwner"], 0) > 0
+    if use_contrib and not contributed:
+        continue   # so conta projetos onde eu escrevi codigo
+    w_repo = 1.0   # cada projeto vale 1 (nao por volume de linhas)
     for edge in edges:
         n = edge["node"]["name"]
         c = edge["node"]["color"] or "#a78bfa"
         if n not in langs: langs[n] = {"size":0.0, "color":c}
-        # peso reequilibrado: cada repo vale 1, a linguagem ganha sua
-        # fracao dentro do proprio repo. Assim um sistema legado gigante
-        # nao domina o cartao por volume de bytes.
-        langs[n]["size"] += edge["size"] / repo_total
+        langs[n]["size"] += (edge["size"] / repo_total) * w_repo
 
 total_size  = sum(v["size"] for v in langs.values()) or 1
 
