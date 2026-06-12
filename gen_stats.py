@@ -255,14 +255,25 @@ if pending:
 # 5. Linguagens agregadas
 langs = {}
 for r in repos:
-    for edge in r["languages"]["edges"]:
+    edges = r["languages"]["edges"]
+    repo_total = sum(e["size"] for e in edges) or 1
+    for edge in edges:
         n = edge["node"]["name"]
         c = edge["node"]["color"] or "#a78bfa"
-        if n not in langs: langs[n] = {"size":0, "color":c}
-        langs[n]["size"] += edge["size"]
+        if n not in langs: langs[n] = {"size":0.0, "color":c}
+        # peso reequilibrado: cada repo vale 1, a linguagem ganha sua
+        # fracao dentro do proprio repo. Assim um sistema legado gigante
+        # nao domina o cartao por volume de bytes.
+        langs[n]["size"] += edge["size"] / repo_total
 
 total_size  = sum(v["size"] for v in langs.values()) or 1
-lang_sorted = sorted(langs.items(), key=lambda x: -x[1]["size"])
+
+# C# sempre no topo; o resto por peso decrescente.
+PIN_FIRST = "C#"
+lang_sorted = sorted(
+    langs.items(),
+    key=lambda x: (0 if x[0] == PIN_FIRST else 1, -x[1]["size"]),
+)
 
 # Paleta preferencial (combina com a estetica roxa)
 PREFERRED_COLORS = {

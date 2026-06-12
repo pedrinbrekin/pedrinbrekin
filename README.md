@@ -102,15 +102,11 @@
 
 ---
 
-## ☽ `$ activity --snake`
+## ☽ `$ activity --log`
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/pedrinbrekin/pedrinbrekin/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/pedrinbrekin/pedrinbrekin/output/github-contribution-grid-snake.svg"/>
-  <img alt="snake eating contributions" src="https://raw.githubusercontent.com/pedrinbrekin/pedrinbrekin/output/github-contribution-grid-snake-dark.svg"/>
-</picture>
+<img src="https://raw.githubusercontent.com/pedrinbrekin/pedrinbrekin/main/generated/activity.svg" alt="Contribution activity" />
 
 </div>
 

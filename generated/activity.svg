@@ -31,7 +31,7 @@
 <line x1="294" y1="88" x2="294" y2="196" stroke="#1e1633"></line>
 
 <g class="fade" style="animation-delay:.15s">
-  <text x="88" y="132" text-anchor="middle" font-size="30" font-weight="700" fill="#e9d5ff">490</text>
+  <text x="88" y="132" text-anchor="middle" font-size="30" font-weight="700" fill="#e9d5ff">491</text>
   <text x="88" y="154" text-anchor="middle" font-size="8.5" letter-spacing="1" fill="#8b7aa8">TOTAL CONTRIBUTIONS</text>
   <text x="88" y="174" text-anchor="middle" font-size="9" fill="#6b5b8a">Jul 2020 — Present</text>
 </g>
