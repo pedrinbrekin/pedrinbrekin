@@ -1,0 +1,166 @@
+<svg id="gh-dark-mode-only" width="360" height="210" xmlns="http://www.w3.org/2000/svg">
+<style>
+svg {
+  font-family: 'Segoe UI', Consolas, monospace, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+#background {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  fill: #0d0d1a;
+  stroke: #2a1a4a;
+  stroke-width: 1px;
+  rx: 8px;
+  ry: 8px;
+}
+
+#gh-dark-mode-only:target #background {
+  fill: #0d0d1a;
+  stroke: #2a1a4a;
+  stroke-width: 0.5px;
+}
+
+foreignObject {
+  width: calc(100% - 10px - 32px);
+  height: calc(100% - 10px - 24px);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #c084fc;
+  fill: #c084fc;
+}
+
+#gh-dark-mode-only:target h2 {
+  color: #c084fc;
+  fill: #c084fc;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  display: inline-flex;
+  font-size: 12px;
+  margin-right: 1ch;
+  align-items: center;
+  flex-wrap: nowrap;
+  transform: translateX(-500%);
+  animation: slideIn 2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+div.ellipsis {
+  height: 176px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.octicon {
+  fill: #7c3aed;
+  margin-right: 0.5ch;
+  vertical-align: top;
+}
+
+#gh-dark-mode-only:target .octicon {
+  color: #7c3aed;
+  fill: #7c3aed;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  overflow: hidden;
+  background-color: #1a0d2e;
+  border-radius: 6px;
+  outline: 1px solid transparent;
+  margin-bottom: 1em;
+}
+
+#gh-dark-mode-only:target .progress {
+  background-color: #1a0d2e;
+}
+
+.progress-item {
+  outline: 2px solid #2a1a4a;
+  border-collapse: collapse;
+}
+
+#gh-dark-mode-only:target .progress-item {
+  outline: 2px solid #2a1a4a;
+}
+
+.lang {
+  font-weight: 600;
+  margin-right: 4px;
+  color: #d8b4fe;
+}
+
+#gh-dark-mode-only:target .lang {
+  color: #d8b4fe;
+}
+
+.percent {
+  color: #7c5cbf
+}
+
+#gh-dark-mode-only:target .percent {
+  color: #7c5cbf;
+}
+</style>
+<g>
+<rect x="5" y="5" id="background" />
+<g>
+<foreignObject x="21" y="17" width="318" height="176">
+<div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
+
+<h2>☽ Languages Used (By File Size)</h2>
+
+<div>
+<span class="progress">
+<span style="background-color: #E3F171;width: 98.064%;" class="progress-item"></span><span style="background-color: #178600;width: 1.581%;" class="progress-item"></span>
+</span>
+</div>
+
+<ul>
+
+
+<li style="animation-delay: 0ms;">
+<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#E3F171;"
+viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
+fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+<span class="lang">Pascal</span>
+<span class="percent">98.06%</span>
+</li>
+
+<li style="animation-delay: 150ms;">
+<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#178600;"
+viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
+fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+<span class="lang">C#</span>
+<span class="percent">1.58%</span>
+</li>
+
+
+</ul>
+
+</div>
+</foreignObject>
+</g>
+</g>
+</svg>
