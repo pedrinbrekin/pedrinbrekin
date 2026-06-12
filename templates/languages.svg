@@ -30,26 +30,10 @@
 
 <rect x="24" y="82" width="402" height="10" rx="5" fill="#16112b"></rect>
 <g clip-path="url(#barclip)">
-  <rect class="bar" x="24.00" y="82" width="392.66" height="10" fill="#f87171" style="animation-delay:0.10s"></rect>
-  <rect class="bar" x="418.16" y="82" width="4.85" height="10" fill="#c084fc" style="animation-delay:0.17s"></rect>
-
+{{ progress_bar }}
 </g>
 
-<g class="fade" style="animation-delay:0.20s">
-  <circle cx="29" cy="116" r="4" fill="#f87171"></circle>
-  <text x="40" y="120" font-size="11" font-weight="700" fill="#e9d5ff">Pascal</text>
-  <text x="213" y="120" text-anchor="end" font-size="10" font-weight="700" fill="#8b7aa8">98.0%</text>
-  <rect x="40" y="125" width="150" height="3" rx="1.5" fill="#16112b"></rect>
-  <rect class="bar" x="40" y="125" width="147.1" height="3" rx="1.5" fill="#f87171" style="animation-delay:0.20s"></rect>
-</g>
-<g class="fade" style="animation-delay:0.28s">
-  <circle cx="29" cy="148" r="4" fill="#c084fc"></circle>
-  <text x="40" y="152" font-size="11" font-weight="700" fill="#e9d5ff">C#</text>
-  <text x="213" y="152" text-anchor="end" font-size="10" font-weight="700" fill="#8b7aa8">1.6%</text>
-  <rect x="40" y="157" width="150" height="3" rx="1.5" fill="#16112b"></rect>
-  <rect class="bar" x="40" y="157" width="2.4" height="3" rx="1.5" fill="#c084fc" style="animation-delay:0.28s"></rect>
-</g>
+{{ lang_rows }}
 
-
-<text class="fade" style="animation-delay:.5s" x="24" y="200" font-size="9" letter-spacing=".5" fill="#5b4a82">// 46 REPOS · 2 LANGUAGES</text>
+<text class="fade" style="animation-delay:.5s" x="24" y="200" font-size="9" letter-spacing=".5" fill="#5b4a82">// {{ repo_count }} REPOS · {{ lang_count }} LANGUAGES</text>
 </svg>
