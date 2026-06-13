@@ -107,7 +107,7 @@
 <div align="center">
 
 [![Email](https://img.shields.io/badge/EMAIL-C084FC?style=for-the-badge&logo=gmail&logoColor=0a0a0f)](mailto:pedrin14brekin@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-7C3AED?style=for-the-badge&logo=linkedin&logoColor=white)](SEU_LINKEDIN_AQUI)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-7C3AED?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/pedro-breke-600b67265)
 
 <br/>
 
